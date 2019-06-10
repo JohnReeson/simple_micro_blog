@@ -19,6 +19,7 @@ function changeFollowers(id){
 			$("#followers"+id).text(data);
 		});
 		$("#cf"+id).text("关注");
+		
 	}
 	else{
 		$.get("follow_create.action",{userId:id},function(data){

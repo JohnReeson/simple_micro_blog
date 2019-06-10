@@ -105,6 +105,7 @@
 											   			</c:otherwise>
 														</c:choose>
 													</c:if>
+													
 													<br />
 					              	 				关注：${user.follows }&nbsp;&nbsp;|&nbsp;&nbsp;
 													粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;

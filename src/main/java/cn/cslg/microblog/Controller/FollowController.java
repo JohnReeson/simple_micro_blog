@@ -24,7 +24,7 @@ public class FollowController {
 	public void create(Integer userId, @ModelAttribute("User") User user1, ModelMap model, HttpServletResponse httpServletResponse){
 		this.followService.createFollow(user1, userId);
 		User user = new User();
-		user.setId(userId);
+		user.setId(userId); 
 		Integer follows = this.followService.countFollowers(user);
 		try {
 			httpServletResponse.getWriter().println(follows);

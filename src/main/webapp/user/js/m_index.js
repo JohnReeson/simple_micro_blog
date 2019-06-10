@@ -19,13 +19,21 @@ function changeFollowers(id){
 			$("#followers"+id).text(data);
 		});
 		$("#cf"+id).text("关注");
-		
+		// 如果搜索出的人里有用户本人，根据用户操作更改用户关注的人数
+		var followOfCurrentUser = $("#currentuser").text();
+		if(followOfCurrentUser!=null && followOfCurrentUser!=undefined){
+			$("#currentuser").text(parseInt(followOfCurrentUser)-1);
+		}
 	}
 	else{
 		$.get("follow_create.action",{userId:id},function(data){
 			$("#followers"+id).text(data);
 		});
 		$("#cf"+id).text("取消关注");
+		var followOfCurrentUser = $("#currentuser").text();
+		if(followOfCurrentUser!=null && followOfCurrentUser!=undefined){
+			$("#currentuser").text(parseInt(followOfCurrentUser)+1);
+		}
 	}
 }
 /**

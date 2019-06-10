@@ -95,7 +95,8 @@
 											<c:forEach items="${map.value}" var="user">
 									    		<div class="list-group-item blog"	>
 													<a href="user_scan.action?id=${user.id}">${user.name}</a>
-													<c:if test="${user.id != sessionScope.User.id}">
+													<c:choose>
+													<c:when test="${user.id != sessionScope.User.id}">
 														<c:choose>
 											   			<c:when test="${followList.contains(user.id)}">
 											   				<button class="btn btn-info" id="cf${user.id }" onclick="changeFollowers('${user.id}')" >取消关注</button>
@@ -104,12 +105,17 @@
 											   				<button class="btn btn-info fc" id="cf${user.id }" onclick="changeFollowers('${user.id}')">关注</button>
 											   			</c:otherwise>
 														</c:choose>
-													</c:if>
-													
-													<br />
-					              	 				关注：${user.follows }&nbsp;&nbsp;|&nbsp;&nbsp;
-													粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-													微博：${user.microblogs }
+														<br />
+					              	 					关注：${user.follows }&nbsp;&nbsp;|&nbsp;&nbsp;
+														粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+														微博：${user.microblogs }
+													</c:when>
+													<c:otherwise>
+														关注：<span id="currentuser">${user.follows }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+														粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+														微博：${user.microblogs }
+													</c:otherwise>
+													</c:choose>
 												</div>
 					            			</c:forEach>
 					            		</div>

@@ -4,9 +4,6 @@
 .settings/
 
 .vscode/
-
-# just commit database without data
-microblog.sql
  
 # Maven
 log/

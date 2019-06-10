@@ -1,0 +1,13 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+.vscode/
+
+# just commit database without data
+microblog.sql
+ 
+# Maven
+log/
+target/

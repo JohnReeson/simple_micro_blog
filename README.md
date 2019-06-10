@@ -1,5 +1,5 @@
 # simple_micro_blog
-对微博部分基础功能的简单实现，后端基于SSM框架，前端基于bootstrap3.
+对微博部分基础功能的简单实现，后端基于SSM框架，前端基于bootstrap3，mysql数据库(micro_blog_structure.sql)。
 
 ### 基本功能
 

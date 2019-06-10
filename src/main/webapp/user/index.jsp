@@ -15,9 +15,9 @@
 	<script src="../ot/bootstrap.min.js"></script>  
 	<link href="../ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	 
- 	<link href="css/m_index.css?t={{time()}}" rel="stylesheet" >
- 	<script src="js/m_index.js?t={{time()}}" ></script> 
- 	<script src="js/publish_check.js?t={{time()}}"></script>
+ 	<link href="css/m_index.css?ver=<%=dateTime%>" rel="stylesheet" >
+ 	<script src="js/m_index.js?ver=<%=dateTime%>" ></script> 
+ 	<script src="js/publish_check.js?ver=<%=dateTime%>"></script>
 </head>
 <body >
 	

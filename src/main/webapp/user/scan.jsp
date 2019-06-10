@@ -15,8 +15,8 @@
 	<script src="../ot/bootstrap.min.js"></script>  
 	<link href="../ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	
-	<script src="js/m_index.js?t={{time()}}" ></script> 
- 	<link href="css/m_index.css?t={{time()}}" rel="stylesheet" >
+	<script src="js/m_index.js?ver=<%=dateTime%>" ></script> 
+ 	<link href="css/m_index.css?ver=<%=dateTime%>" rel="stylesheet" >
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" >

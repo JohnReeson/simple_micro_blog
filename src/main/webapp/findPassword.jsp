@@ -14,8 +14,8 @@
 	<script src="ot/bootstrap.min.js"></script>  
 	<link href="ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	
-	<link href="css/p_index.css?ver=<%=dateTime%>" rel="stylesheet">
-	<script src="js/findpasswd.js?ver=<%=dateTime%>"></script>
+	<link href="css/p_index.css?ver=1" rel="stylesheet">
+	<script src="js/findpasswd.js?ver=1"></script>
 </head>
 <body  >
 	<div class="container center-block" style="width:960px;height:600px;background:url(img/fpbg.jpg);">

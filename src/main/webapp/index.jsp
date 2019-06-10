@@ -14,9 +14,9 @@
 	<script src="ot/bootstrap.min.js"></script>  
 	<link href="ot/bootstrap.min.css" rel="stylesheet" media="screen" >
  	
- 	<link href="css/p_index.css" rel="stylesheet">
- 	<link href="css/loading.css" rel="stylesheet" >
- 	<script src="js/loaded.js"></script>
+ 	<link href="css/p_index.css?t={{time()}}" rel="stylesheet">
+ 	<link href="css/loading.css?t={{time()}}" rel="stylesheet" >
+ 	<script src="js/loaded.js?t={{time()}}"></script>
 </head>
 <body style="background: url(img/bg.jpg);">
 	<!-- Preloader -->

@@ -16,9 +16,9 @@
 	<script src="../ot/bootstrap.min.js"></script>  
 	<link href="../ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	
-	<script src="js/m_index.js" ></script>
-	<link href="css/m_index.css" rel="stylesheet" > 
-	<script src="js/search_result.js"></script>
+	<script src="js/m_index.js?t={{time()}}" ></script>
+	<link href="css/m_index.css?t={{time()}}" rel="stylesheet" > 
+	<script src="js/search_result.js?t={{time()}}"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" >
@@ -111,6 +111,7 @@
 														微博：${user.microblogs }
 													</c:when>
 													<c:otherwise>
+														<br />
 														关注：<span id="currentuser">${user.follows }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
 														粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
 														微博：${user.microblogs }

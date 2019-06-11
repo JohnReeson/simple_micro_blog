@@ -56,10 +56,10 @@
 				<c:if test="${UserScan.id != sessionScope.User.id }">
 					<c:choose>
 					   <c:when test="${Follow}">
-					   		<button class="btn btn-info fc" onclick="changeFollowers('${UserScan.id}')" >取消关注</button>
+					   		<button class="btn btn-info" id="cf${UserScan.id }" onclick="changeFollowers('${UserScan.id}')" >取消关注</button>
 					   </c:when>
 					   <c:otherwise>
-					   		<button class="btn btn-info fc" onclick="changeFollowers('${UserScan.id}')" >关注</button>
+					   		<button class="btn btn-info" id="cf${UserScan.id }" onclick="changeFollowers('${UserScan.id}')" >关注</button>
 					   </c:otherwise>
 					</c:choose>
 				</c:if>

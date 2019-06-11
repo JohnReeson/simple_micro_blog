@@ -102,7 +102,7 @@
 											   				<button class="btn btn-info" id="cf${user.id }" onclick="changeFollowers('${user.id}')" >取消关注</button>
 											   			</c:when>
 											   			<c:otherwise>
-											   				<button class="btn btn-info fc" id="cf${user.id }" onclick="changeFollowers('${user.id}')">关注</button>
+											   				<button class="btn btn-info" id="cf${user.id }" onclick="changeFollowers('${user.id}')">关注</button>
 											   			</c:otherwise>
 														</c:choose>
 														<br />

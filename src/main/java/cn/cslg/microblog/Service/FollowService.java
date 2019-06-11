@@ -2,7 +2,6 @@ package cn.cslg.microblog.Service;
 
 import java.util.List;
 
-import cn.cslg.microblog.PO.Follow;
 import cn.cslg.microblog.PO.User;
 
 public interface FollowService {
@@ -11,8 +10,15 @@ public interface FollowService {
 	 * @param user
 	 * @return
 	 */
-	List<Follow> findFollowsByUser(User user);
+	List<Integer> findFollowsByUser(User user);
 	
+	/**
+	 * 找寻该用户关注的所有粉丝
+	 * @param user
+	 * @return
+	 */
+	List<Integer> findFollowersByUser(User user);
+
 	/**
 	 * user1是否已经关注了user2
 	 * @param user1

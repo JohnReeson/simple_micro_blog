@@ -15,8 +15,8 @@
 	<script src="../ot/bootstrap.min.js"></script>  
 	<link href="../ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	
-	<script src="js/m_index.js?ver=1" ></script> 
- 	<link href="css/m_index.css?ver=1" rel="stylesheet" >
+	<script src="js/m_index.js?ver=20190612" ></script> 
+ 	<link href="css/m_index.css?ver=20190612" rel="stylesheet" >
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" >
@@ -64,9 +64,10 @@
 					</c:choose>
 				</c:if>
 				<br />
-				关注：${Follows}&nbsp;&nbsp;|&nbsp;&nbsp;
-				粉丝：<span id="followers${UserScan.id}">${Followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-				微博：${Microblogs.size() }<br/>
+				关注：<a href="user_scan_follows.action?id=${UserScan.id}&isFollow=1">${Follows}</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				粉丝：<a href="user_scan_follows.action?id=${UserScan.id}&isFollow=0"><span id="followers${UserScan.id}">${Followers }</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+				微博：<a href="user_scan.action?id=${UserScan.id}">${Microblogs.size() }</a>
+				<br/>
 			</div>
 		</div>
 		<div class="row">

@@ -1,4 +1,4 @@
-?ver=1<?xml version="1.0" encoding="UTF-8" ?>
+?ver=20190612<?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
@@ -15,8 +15,8 @@
 	<script src="ot/bootstrap.min.js"></script>  
 	<link href="ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	
-	<link href="css/p_index.css?ver=1" rel="stylesheet">
-	<script src="js/resetpasswd.js?ver=1"></script> 
+	<link href="css/p_index.css?ver=20190612" rel="stylesheet">
+	<script src="js/resetpasswd.js?ver=20190612"></script> 
 </head>
 <body  >
 	<div class="container center-block" style="width:960px;height:600px;background:url(img/fpbg.jpg);">

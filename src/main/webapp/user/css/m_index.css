@@ -17,7 +17,7 @@ body{
 }
 #logo{
 	line-height:50px;
-	vertical-align:bottom;
+    float:left;
 	font-size: 28px;
 }
 /* 导航栏右侧链接 */

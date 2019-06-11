@@ -21,6 +21,20 @@ public interface MicroblogService {
 	 */
 	public List<Microblog> getAll(User user);
 
+
+	/**
+	 * 获得用户所发微博数
+	 * @param user
+	 * @return Integer
+	 */
+	public Integer countAll(User user);
+
+	public Integer countBySourceMicroblogId(Integer microblogId);
+
+	public Integer countByForwardMicroblogId(Integer microblogId);
+
+	List<Microblog> selectIllegibilityByContent(List<String> search);
+
 	/**
 	 * 用户转发微博
 	 * @param microblog

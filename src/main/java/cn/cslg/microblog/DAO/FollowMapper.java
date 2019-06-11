@@ -60,7 +60,9 @@ public interface FollowMapper {
      * @param id
      * @return 
      */
-	List<Follow> selectByUserId1(Integer id);
+    List<Integer> selectByUserId1(Integer id);
+    
+    List<Integer> selectByUserId2(Integer id);
 
 	Follow selectByUserId1AndUserId2(Integer id, Integer id2);
 

@@ -14,9 +14,9 @@
 	<script src="ot/bootstrap.min.js"></script>  
 	<link href="ot/bootstrap.min.css" rel="stylesheet" media="screen" >
  	
- 	<link href="css/p_index.css?ver=1" rel="stylesheet">
- 	<link href="css/loading.css?ver=1" rel="stylesheet" >
- 	<script src="js/loaded.js?ver=1"></script>
+ 	<link href="css/p_index.css?ver=20190612" rel="stylesheet">
+ 	<link href="css/loading.css?ver=20190612" rel="stylesheet" >
+ 	<script src="js/loaded.js?ver=20190612"></script>
 </head>
 <body style="background: url(img/bg.jpg);">
 	<!-- Preloader -->

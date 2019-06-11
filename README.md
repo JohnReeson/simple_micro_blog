@@ -11,3 +11,6 @@
 ### 配置
 1. MailServiceImpl 邮件服务器配置和验证跳转链接
 2. jdbc.properties mysql数据库配置
+
+### 兼容性
+On computer, Chrome75 IE11 EdgeHTML17

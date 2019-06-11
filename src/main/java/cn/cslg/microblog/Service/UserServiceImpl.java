@@ -2,6 +2,7 @@ package cn.cslg.microblog.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Random;
 
 import javax.annotation.Resource;
@@ -124,6 +125,11 @@ public class UserServiceImpl implements UserService {
 	public User findByEmail(String email) {
 		User user = this.userMapper.selectByEmail(email);
 		return user;
+	}
+
+	@Override
+	public List<User> selectIllegibilityByName(List<String> search) {
+		return this.userMapper.selectIllegibilityByName(search);
 	}
 
 }

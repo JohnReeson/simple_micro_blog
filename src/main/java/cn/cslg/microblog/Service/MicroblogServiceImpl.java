@@ -1,14 +1,12 @@
 package cn.cslg.microblog.Service;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 import cn.cslg.microblog.DAO.MicroblogMapper;
-import cn.cslg.microblog.PO.Follow;
 import cn.cslg.microblog.PO.ForwardRemark;
 import cn.cslg.microblog.PO.Microblog;
 import cn.cslg.microblog.PO.User;
@@ -38,11 +36,7 @@ public class MicroblogServiceImpl implements MicroblogService {
 
 	@Override
 	public List<Microblog> getAll(User user) {
-		List<Follow> follows = this.followService.findFollowsByUser(user);
-		List<Integer> users = new ArrayList<Integer>();
-		for (int i = 0; i < follows.size(); i++) {
-			users.add(follows.get(i).getUserid2());
-		}
+		List<Integer> users = this.followService.findFollowsByUser(user);
 		users.add(user.getId());
 		List<Microblog> microblogs = this.microblogMapper.selectByIds(users);
 		for (int i = 0; i < microblogs.size(); i++) {
@@ -173,6 +167,26 @@ public class MicroblogServiceImpl implements MicroblogService {
 	@Override
 	public void delete(Microblog microblog) {
 		this.microblogMapper.deleteByPrimaryKey(microblog.getId());
+	}
+
+	@Override
+	public Integer countAll(User user) {
+		return this.microblogMapper.countByUserId(user.getId());
+	}
+
+	@Override
+	public Integer countBySourceMicroblogId(Integer microblogId) {
+		return this.microblogMapper.countBySourceMicroblogId(microblogId);
+	}
+
+	@Override
+	public Integer countByForwardMicroblogId(Integer forwardMicroblogId) {
+		return this.microblogMapper.countByForwardMicroblogId(forwardMicroblogId);
+	}
+
+	@Override
+	public List<Microblog> selectIllegibilityByContent(List<String> search) {
+		return this.microblogMapper.selectIllegibilityByContent(search);
 	}
 
 }

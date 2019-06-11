@@ -16,9 +16,9 @@
 	<script src="../ot/bootstrap.min.js"></script>  
 	<link href="../ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	
-	<script src="js/m_index.js?ver=1" ></script>
-	<link href="css/m_index.css?ver=1" rel="stylesheet" > 
-	<script src="js/search_result.js?ver=1"></script>
+	<script src="js/m_index.js?ver=20190612" ></script>
+	<link href="css/m_index.css?ver=20190612" rel="stylesheet" > 
+	<script src="js/search_result.js?ver=20190612"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" >
@@ -106,15 +106,15 @@
 											   			</c:otherwise>
 														</c:choose>
 														<br />
-					              	 					关注：${user.follows }&nbsp;&nbsp;|&nbsp;&nbsp;
+					              	 					关注：<a href="user_scan_follows.action?id=${user.id}&isFollow=1">${user.follows }</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 													</c:when>
 													<c:otherwise>
 														<br />
-														关注：<span id="currentuser">${user.follows }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+														关注：<a href="user_scan_follows.action?id=${user.id}&isFollow=1"><span id="currentuser">${user.follows }</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;
 													</c:otherwise>
 													</c:choose>
-													粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-													微博：${user.microblogs }
+													粉丝：<a href="user_scan_follows.action?id=${user.id}&isFollow=0"><span id="followers${user.id}">${user.followers }</span></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+													微博：<a href="user_scan.action?id=${user.id}">${user.microblogs }</a>
 												</div>
 					            			</c:forEach>
 					            		</div>

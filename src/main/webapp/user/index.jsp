@@ -15,9 +15,9 @@
 	<script src="../ot/bootstrap.min.js"></script>  
 	<link href="../ot/bootstrap.min.css" rel="stylesheet" media="screen" >
 	 
- 	<link href="css/m_index.css?ver=1" rel="stylesheet" >
- 	<script src="js/m_index.js?ver=1" ></script> 
- 	<script src="js/publish_check.js?ver=1"></script>
+ 	<link href="css/m_index.css?ver=20190612" rel="stylesheet" >
+ 	<script src="js/m_index.js?ver=20190612" ></script> 
+ 	<script src="js/publish_check.js?ver=20190612"></script>
 </head>
 <body >
 	

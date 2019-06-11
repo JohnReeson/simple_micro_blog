@@ -54,7 +54,7 @@ public interface MicroblogMapper {
 	 * @param id
 	 * @return
 	 */
-	Integer countBySourceMicroblogId(Integer id);
+	Integer countBySourceMicroblogId(Integer microblogId);
 	
 	List<Microblog> selectFourByForwardMicroblogId(Integer forwardMicroblogId);
 
@@ -63,7 +63,7 @@ public interface MicroblogMapper {
 	 * @param id
 	 * @return
 	 */
-	Integer countByForwardMicroblogId(Integer id);
+	Integer countByForwardMicroblogId(Integer forwardMicroblogId);
 
 	/**
 	 * 查看当前页面的转发评论

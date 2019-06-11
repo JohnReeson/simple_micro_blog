@@ -1,5 +1,7 @@
 package cn.cslg.microblog.Service;
 
+import java.util.List;
+
 import cn.cslg.microblog.PO.User;
 
 public interface UserService {
@@ -24,5 +26,7 @@ public interface UserService {
 	public boolean isFindPassword(User user);
 
 	public User findByEmail(String email);
+
+	public List<User> selectIllegibilityByName(List<String> search);
 
 }

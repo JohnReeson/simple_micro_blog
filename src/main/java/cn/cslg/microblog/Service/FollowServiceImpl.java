@@ -15,8 +15,13 @@ public class FollowServiceImpl implements FollowService {
 	private FollowMapper followMapper;
 	
 	@Override
-	public List<Follow> findFollowsByUser(User user) {
+	public List<Integer> findFollowsByUser(User user) {
 		return this.followMapper.selectByUserId1(user.getId());
+	}
+
+	@Override
+	public List<Integer> findFollowersByUser(User user) {
+		return this.followMapper.selectByUserId2(user.getId());
 	}
 
 	@Override
@@ -54,5 +59,7 @@ public class FollowServiceImpl implements FollowService {
 	public Integer countFollowers(User user1) {
 		return this.followMapper.countByUserId2(user1.getId());
 	}
+
+
 
 }

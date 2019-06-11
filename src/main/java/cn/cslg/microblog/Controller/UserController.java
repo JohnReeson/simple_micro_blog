@@ -178,7 +178,7 @@ public class UserController {
 	@RequestMapping("user/user_search")
 	public String search(String value,ModelMap modelMap){
 		if(value==null){
-			return "/user/showSearchResult";
+			return "/user/searchResult";
 		}
 		User user = (User) modelMap.get("User");
 		modelMap.addAttribute("value", value);
@@ -190,7 +190,7 @@ public class UserController {
 		modelMap.addAttribute("followList", followList);
 		HashMap<String, List> result = this.searchService.searchResult(value);
 		modelMap.put("result", result);
-		return "/user/showSearchResult";
+		return "/user/searchResult";
 	}
 
 }

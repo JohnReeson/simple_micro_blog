@@ -107,16 +107,14 @@
 														</c:choose>
 														<br />
 					              	 					关注：${user.follows }&nbsp;&nbsp;|&nbsp;&nbsp;
-														粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-														微博：${user.microblogs }
 													</c:when>
 													<c:otherwise>
 														<br />
 														关注：<span id="currentuser">${user.follows }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-														粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
-														微博：${user.microblogs }
 													</c:otherwise>
 													</c:choose>
+													粉丝：<span id="followers${user.id}">${user.followers }</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+													微博：${user.microblogs }
 												</div>
 					            			</c:forEach>
 					            		</div>

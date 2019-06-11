@@ -42,7 +42,7 @@ public class RemarkController {
 		modelMap.addAttribute("Page", page);
 		modelMap.addAttribute("microblog", microblog);
 		modelMap.addAttribute("partSelect", 0);
-		return "/user/showMore";
+		return "/user/blogDetail";
 	}
 	
 	@RequestMapping("user/remark_partMore")

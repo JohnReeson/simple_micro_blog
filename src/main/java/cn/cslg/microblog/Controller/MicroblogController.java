@@ -43,7 +43,7 @@ public class MicroblogController {
 		List<Microblog> microblogs = this.microblogService.getFourByForward(microblog);
 		modelMap.addAttribute("Microblog", microblog);
 		modelMap.addAttribute("Microblogs", microblogs);
-		return "/user/showForwardRemarkLess";
+		return "/user/forwardLess";
 	}
 	
 	@RequestMapping("user/microblog_showForwardMore")
@@ -53,7 +53,7 @@ public class MicroblogController {
 		modelMap.addAttribute("microblog", mic);
 		modelMap.addAttribute("Page", page);
 		modelMap.addAttribute("partSelect",1);
-		return "/user/showMore";
+		return "/user/blogDetail";
 	}
 	
 	@RequestMapping("user/forward_partMore")
@@ -61,7 +61,7 @@ public class MicroblogController {
 		page = this.microblogService.getTenByForward(microblog,page);
 		modelMap.addAttribute("microblog", microblog);
 		modelMap.addAttribute("Page", page);
-		return "/user/showForwardRemarkMore";
+		return "/user/forwardMore";
 	}
 	
 	@RequestMapping("user/microblog_forward")

@@ -13,8 +13,8 @@ public class MailServiceImpl implements MailService {
 
 	@Override
 	public void sendActivecode(User user) {
-		Mail mail = new Mail("smtp.163.com","18601579143@163.com","简易微博注册",
-				"18601579143@163.com","1qaz2wsx",true);
+		Mail mail = new Mail("mailserver","emailaddress","简易微博注册",
+				"emailaddress","password",true);
 		StringBuffer sf=new StringBuffer();  
         sf.append("http://localhost:8080/microBlog/user_active.action?name=");  
         try {
@@ -35,8 +35,8 @@ public class MailServiceImpl implements MailService {
 
 	@Override
 	public void sendResetPassword(User user) {
-		Mail mail = new Mail("smtp.163.com","18601579143@163.com","微博",
-				"18601579143@163.com","1qaz2wsx",true);
+		Mail mail = new Mail("mailserver","emailaddress","简易微博注册",
+				"emailaddress","password",true);
 		StringBuffer sf=new StringBuffer();  
         sf.append("http://localhost:8080/microBlog/user_showResetPassword.action?name=");  
         try {

@@ -13,7 +13,7 @@ public class MailServiceImpl implements MailService {
 
 	@Override
 	public void sendActivecode(User user) {
-		Mail mail = new Mail("mailserver","emailaddress","简易微博注册",
+		Mail mail = new Mail("mailserver","emailaddress","simple microBlog register",
 				"emailaddress","password",true);
 		StringBuffer sf=new StringBuffer();  
         sf.append("http://localhost:8080/microBlog/user_active.action?name=");  
@@ -35,7 +35,7 @@ public class MailServiceImpl implements MailService {
 
 	@Override
 	public void sendResetPassword(User user) {
-		Mail mail = new Mail("mailserver","emailaddress","简易微博注册",
+		Mail mail = new Mail("mailserver","emailaddress","simple microBlog register",
 				"emailaddress","password",true);
 		StringBuffer sf=new StringBuffer();  
         sf.append("http://localhost:8080/microBlog/user_showResetPassword.action?name=");  

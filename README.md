@@ -9,8 +9,9 @@
 4. 关注，取消关注用户
 
 ### 配置
-1. MailServiceImpl 邮件服务器配置和验证跳转链接
-2. jdbc.properties mysql数据库配置
+1. jdbc.properties mysql数据库配置
+2. MailServiceImpl 邮件服务器配置和验证跳转链接
+3. /microBlog 的路径前缀在本地debug时使用，发布到根路径需要删除。
 
 ### 兼容性
-On computer, Chrome75 IE11 EdgeHTML17
+On computer, Chrome75/IE11/EdgeHTML17

@@ -16,6 +16,21 @@ Date: 2019-05-10 12:55:38
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `activecode` varchar(50) NOT NULL,
+  `state` int(11) NOT NULL COMMENT '激活状态：0代表未激活，1代表激活',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+
+-- ----------------------------
 -- Table structure for follow
 -- ----------------------------
 DROP TABLE IF EXISTS `follow`;
@@ -70,17 +85,3 @@ CREATE TABLE `remark` (
   CONSTRAINT `Remark_microblogId_Microblog_id` FOREIGN KEY (`microblogId`) REFERENCES `microblog` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `Remark_userId_User_id` FOREIGN KEY (`userId`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=175 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for user
--- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `activecode` varchar(50) NOT NULL,
-  `state` int(11) NOT NULL COMMENT '激活状态：0代表未激活，1代表激活',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;

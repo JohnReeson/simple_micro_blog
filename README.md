@@ -2,8 +2,8 @@
 对微博部分基础功能的简单实现，后端基于SSM框架，前端基于bootstrap3，mysql数据库(micro_blog_structure.sql)。
 
 ### 测试账号
+https://simplemicroblog.azurewebsites.net/
 user: admin  password: !QAZ2wsx
-服务器从闲置到首次加载需要半分钟左右，请耐心等待。
 
 ### 基本功能
 
